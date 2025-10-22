@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+        * {
+            font-family: "Playfair Display", serif;
+        }
+        
+        .carousel-item {
+            height: calc(100vh - 56px);
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        a {
+            float: center;
+            align-content: center;
+            text-align: center;
+            border: 2px solid grey;
+            color: white;
+            background: linear-gradient(to right, grey, white);
+        }
+        a link img {
+            align-items:center;
+            background-color: none;
+        }
+
+        h1 {
+            position: relative;
+        }
+        
+        h1::before {
+            content: "";
+            width: 150px;
+            height: 7px;
+            border-radius: 5px;
+            color: blue;
+            background: linear-gradient(to right, grey,black);
+            position: absolute;
+            bottom: -10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        
+        .arrival .card {
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .arrival .card:hover {
+            box-shadow: -3px -3px 15px gray;
+            transform: scale(1.04);
+        }
+        
+        .overlay {
+            height: 60vh;
+            overflow: hidden;
+            margin: 20px;
+            
+        }
+        .overlay h5{
+            font-family: "Bungee Shade", sans-serif ; 
+        }
+        .overlay p{
+            font-style: italic;
+            text-shadow: 1px 1px black;
+        }
+        .overlay img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.4;
+        }
+        .card-img-overlay{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-right a {
+  margin-right: 15px;
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+    </style>
+</head>
+<body></body>
+  <body class="bg-dark text-light">
+      <nav class="navbar navbar-expand-lg bg-dark-subtle">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Cricket World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex m-auto me-5" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Matches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Product</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Kookaburra</a></li>
+                            <li><a class="dropdown-item" href="#">Gray-Nicolls</a></li>
+                            <li><a class="dropdown-item" href="#">Gunn & Moore</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Sign-up and Login
+</button>
+
+<!-- Modal -->
+    </nav>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://images.unsplash.com/photo-1567943346767-72780dd14cd5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1374"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://images.unsplash.com/photo-1625401586060-f12be3d7cc57?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://plus.unsplash.com/premium_photo-1722086350831-3cc30b7d68a7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h1>Products</h1><br>
+    <h1 class="text-center my-3 ">Balls</h1>
+    <div class="container arrival">
+        <div class="row gap-3 m-2 justify-content-center">
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://cusports.shop/cdn/shop/files/CU-Sports-Crown-Edition-Leather-Cricket-Ball-Hand-Stitched-Export-Quality-40-45-Overs-CU-Sports-40951879532824_1000x.jpg?v=1747844653"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">Crown</div>
+                    <div class="card-title">$ 50</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/71rctu4iX-L._AC_UL495_SR435,495_.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">One Global</div>
+                    <div class="card-title">$ 200</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-mr12 ">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/6182OFqU77L._AC_UL495_SR435,495_.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">One Global</div>
+                    <div class="card-title">$ 300</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h1 class="text-center my-3 ">Bat</h1>
+    <div class="container arrival">
+        <div class="row gap-3 m-2 justify-content-center">
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://www.cricketcloset.com/wp-content/uploads/2024/01/CA-Gold-Legend-Cricket-Bat-2.jpg"
+                    alt="" class="card-img-top">
+                    <div class="card-body text-center">
+                    <div class="card-title">CA Gold Legend Bat</div>
+                    <div class="card-title">$ 250</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://www.cricketcloset.com/wp-content/uploads/2025/01/HS-Ultra-Cricket-Bat.jpg.jpg"
+                    alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">
+
+HS Ultra Cricket Bat</div>
+                    <div class="card-title">$ 600</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://www.cricketcloset.com/wp-content/uploads/2021/12/Ihsan-Revo-GX97-2-1.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">
+
+Ihsan Revo GX97 Bat</div>
+                    <div class="card-title">$ 400</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center my-3 ">Helmet</h1>
+    <div class="container arrival">
+        <div class="row gap-3 m-2 justify-content-center">
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuaNbj5odcDBnXonc-rW1vL945ibW8nTScpw&s"
+                    alt="" class="card-img-top">
+                    <div class="card-body text-center">
+                    <div class="card-title">Shery</div>
+                    <div class="card-title">$ 150</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://i.ebayimg.com/images/g/kMIAAOSw8eZjoZ9b/s-l1200.jpg"
+                    alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">Lv Brand</div>
+                    <div class="card-title">$ 200</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://5.imimg.com/data5/AV/ZA/QR/SELLER-1399525/moonwalker-cricket-helmet-500x500.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">Moon Walker</div>
+                    <div class="card-title">$ 170</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center my-3 ">Gloves</h1>
+    <div class="container arrival">
+        <div class="row gap-3 m-2 justify-content-center">
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://championsports.pk/wp-content/uploads/2024/03/IMG-20230812_113608.webp"
+                    alt="" class="card-img-top">
+                    <div class="card-body text-center">
+                    <div class="card-title">Grey Nicoles</div>
+                    <div class="card-title">$ 100</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://www.cricketcloset.com/wp-content/uploads/2025/03/HS-Core-8-Batting-Gloves-1.jpg"
+                    alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">HS Brand</div>
+                    <div class="card-title">$ 110</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://m.media-amazon.com/images/I/718dW1DE8TL.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">DSC Brand</div>
+                    <div class="card-title">$ 145</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center my-3 ">Keeper Gloves</h1>
+    <div class="container arrival">
+        <div class="row gap-3 m-2 justify-content-center">
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://allstarskit.com/wp-content/uploads/2025/01/01-42-640x640.webp"
+                    alt="" class="card-img-top">
+                    <div class="card-body text-center">
+                    <div class="card-title">CA Brands</div>
+                    <div class="card-title">$ 190</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://www.masuri.com/cdn/shop/products/CLineYellowGlovesSenior.jpg?v=1623118345"
+                    alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">Masuri</div>
+                    <div class="card-title">$ 140</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+            <div class="card col-sm-2 col-md-4 col-lg-3 col-12 ">
+                <img src="https://isportscricket.com/wp-content/uploads/2023/10/EM-Indoor-Wicket-Keeping-Glove.jpg"
+                alt="" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="card-title">EM Brand</div>
+                    <div class="card-title">$ 220--------------------</div>
+                    <button class="btn btn-sm btn-outline-info">Shop Now</button>
+                    <button class="btn btn-sm btn-outline-primary">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center my-3">Brands</h1>
+    <div class="container">
+        <div class="card text-bg-dark overlay">
+            <img src="https://assets.2.commercebuild.com/b522fd52e101edc926c3308c230445d5/contents/phoebereplica25/thumbnail/big_phoebereplica25.jpg"
+                class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title display-1 fw-bold">Kookaburra</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                    <a href="https://www.kookaburrasport.com.au/?srsltid=AfmBOooPSCimilL3ZU68x_xtnUqYEZKvDVdmWduCMYnwc1Ui8rmOZJwp">Preview</a>
+                <button class="btn btn-danger btn-lg">Shop NOw</button>
+            </div>
+        </div>
+         <div class="card text-bg-dark overlay">
+            <img src="https://gmcricket.in/media/promobanners//b/a/bats.jpg"
+            class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title display-1 fw-bold">Gunn & Moore</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                    <a href="https://gmcricket.in/">Preview</a>
+                <button class="btn btn-danger btn-lg">Shop NOw</button>
+            </div>
+        </div>
+        <div class="card text-bg-dark overlay">
+            <img src="https://www.gray-nicolls.co.uk/cdn/shop/files/CACA25English_20Willow_20Bats_20Classic_20Pro_20Performance_20Bat_20Front_20Left.jpg?v=1727175927&width=1066"
+                class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title display-1 fw-bold">Gray-Nicolls</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                    <a href="https://www.gray-nicolls.co.uk/">Preview</a>
+                <button class="btn btn-danger btn-lg">Shop NOw</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cricket World</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+</div>
+  <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 MyCompany. All rights reserved.</p>
+    </div>
+     <div class="social-media-links">
+        <a href="#" id="ix94i-2">
+            <img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+          </a>
+          <a href="#">
+              <img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+          </a>
+          <a href="#">
+              <img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+          </a>
+          <a href="#" id="izldf-2">
+              <img class="link-img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+            </a>
+        </div>
+  </footer>     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+</head>
