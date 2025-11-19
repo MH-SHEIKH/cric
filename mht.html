@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First Website using bootstrap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    header {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    }
+    .stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        1234px 543px #fff, 300px 200px #fff, 800px 1200px #fff,
+        1500px 300px #fff, 900px 1600px #fff, 2000px 900px #fff;
+    animation: moveStars 50s linear infinite;
+}
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+header h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    animation: fadeIn 2s ease-in-out;
+}
+header p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.scroll-btn:hover {
+    background: #fff;
+    color: #000;
+}
+    body {
+      font-family: "Playfair Display", serif;
+    }
+
+    .carousel-item {
+      width: 100%;
+      height: calc(90vh );
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+   .my-cards .card {
+      height: 450px;
+    }
+
+    .my-cards .card:hover {
+      box-shadow: 1px 1px 5px;
+    }
+
+    .my-cards .card img {
+      height: 60%;
+      object-fit: contain;
+
+    }
+    .my-category .card{
+      overflow: hidden;
+      border: none !important;
+    }
+    .my-category img{
+      border-radius: 50%;
+    }
+    
+    .my-category .card button{
+      margin:10px ;
+    }
+    .my-category .card h5{
+      padding:10px 0px;
+    }
+    .brands{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0px 10px;
+      width: 100%;
+    }
+    .brands i{
+      font-size: 30px;
+      border: 1px solid;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .footer-links{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 18px;
+      
+    }
+    .footer-links li:before{
+      content: " . ";
+    }
+    .brands i:nth-child(1) {
+      background: linear-gradient(rgb(133, 142, 146), rgb(0, 162, 255));
+      color: white;
+    }
+       .brands i:nth-child(2) {
+      background:linear-gradient(rgb(241, 111, 111) ,rgb(234, 57, 57));
+      color: white;
+    }
+       .brands i:nth-child(3) {
+      background:linear-gradient(rgb(130, 149, 161) ,red);
+      color: white;
+    }
+       .brands i:nth-child(4) {
+      background: linear-gradient(rgb(117, 244, 117), rgb(67, 228, 67));
+      color: white;
+    }
+    footer {
+    background: #050505;
+    padding: 50px 10%;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+footer .social {
+    margin: 20px 0;
+}
+footer .social a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+footer .social a:hover {
+    color: #0af;
+}
+
+footer .bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+  </style>
+</head>
+    <header>
+    <h1>ASTRONOMY</h1>
+    <p>Journey beyond the stars and explore the mysteries of the universe.</p>
+    <button class="scroll-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+        Explore ↓
+    </button>
+</header>
+
+<body class="bg-dark">
+  <header class="my-navbar">
+    <nav class="navbar navbar-expand-lg bg-dark position-fixed w-100 z-3" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-4 fw-bold fst-italic logo" href="#">Astronomy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bold" href="#">About Us</a>
+            </li>
+             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+            
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</a>
+            </li>
+          </ul>
+          <form class="d-flex nav-search" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="my-slider">
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              src="https://www.bresser.com/media/31/b6/26/1724142188/banner-category-astronomy_530x320px_BRESSER_v082024a_%281%29.webp"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://img.freepik.com/premium-photo/planet-with-all-planets-universe_337384-97359.jpg"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://voca-land.sgp1.cdn.digitaloceanspaces.com/0/1757662010588/b2aa08f3.jpg"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://cdn.mos.cms.futurecdn.net/VGtvK7hSsQRNvgvKAkLVgf-1200-80.jpg"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="my-cards">
+      <h1 class="text-light text-center mt-2">Universe</h1>
+      <hr class="p-5 text-light w-75 m-auto mt-4">
+      <div class="container mt-4">
+        <div class="row ">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://media.istockphoto.com/id/481229372/photo/spiral-galaxy-illustration-of-milky-way.jpg?s=612x612&w=0&k=20&c=O-OKRJWM_XhGv48z6OhOj_tKBwEaDsvhYKguEN1yuJM="
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Galaxies</h5>
+                <p class="text-center">A galaxy is a massive system of stars, gas, dust, and dark matter held together by gravity</p>
+                <div class="text-center">
+                  <!-- <a href="#" class="btn btn-primary ">Shop Now</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://universemagazine.com/wp-content/uploads/2023/11/photo_2023-11-10_17-31-38-3-630x1024.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Speed of light</h5>
+                <p class="text-center">Light reach us from different object</p>
+                <div class="text-center">
+                  <!-- <a href="#" class="btn btn-primary ">Shop Now</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://www.pinewoodgroup.com/production/gravity" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Gravity</h5>
+                <p class="text-center">Gravity is the fundamental force of attraction that exists between all objects with mass, causing them to pull toward one another.</p>
+                <div class="text-center">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="my-category">
+      <div class="container p-4">
+        <h1 class="text-center text-light my-4">Category</h1>
+        <hr class="p-5 text-light w-75 m-auto mt-4">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card text-bg-dark">
+              <img src="https://plus.nasa.gov/wp-content/uploads/2024/03/earth.jpg?w=500" class="card-img" alt="...">
+              <div class="card-img-overlay-bottom text-center">
+                <h5 class="card-title">Earth</h5>
+                
+              </div>
+            </div>
+          </div>
+            <div class="col-md-3">
+            <div class="card text-bg-dark">
+              <img src="https://news.ucr.edu/sites/default/files/2022-07/jupiter_rings_bright.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay-bottom text-center">
+                <h5 class="card-title">Jupiter</h5>
+                
+              </div>
+            </div>
+          </div>
+            <div class="col-md-3">
+            <div class="card text-bg-dark">
+              <img src="https://cdn.hswstatic.com/gif/gettyimages-1406174121.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay-bottom text-center">
+                <h5 class="card-title">Sun</h5>
+                
+              </div>
+            </div>
+          </div>
+            <div class="col-md-3">
+            <div class="card text-bg-dark">
+              <img src="https://images.stockcake.com/public/a/3/3/a33a7c3c-bd95-4d54-8423-f479aa2cfa68_large/moonlit-cloudscape-aura-stockcake.jpg" class="card-img" alt="...">
+              <div class="card-img-overlay-bottom text-center">
+                <h5 class="card-title">moon</h5>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us">
+      <h1 class="text-center my-4 text-light">Information</h1>
+      <div class="container">
+        <div class="row">
+           <hr class="p-5 text-light w-75 m-auto mt-4">
+          <div class="col-md-6">
+            <p class="text-light fst-italic text-start fs-3">Stars form inside relatively dense concentrations of interstellar gas and dust known as molecular clouds. These regions are extremely cold (temperature about 10 to 20K, just above absolute zero). At these temperatures, gases become molecular meaning that atoms bind together. CO and H2 are the most common molecules in interstellar gas clouds. The deep cold also causes the gas to clump to high densities. When the density reaches a certain point, stars form.</p>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="https://pages.uoregon.edu/jschombe/images/star_propagation.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="https://cosmosatyourdoorstep.com/wp-content/uploads/2023/02/andromeda-galaxy-milky-way.jpg?w=1024" class="img-fluid" alt="">
+          </div>
+         <div class="col-md-6">
+            <p class="text-light fst-italic text-start fs-3">The Milky Way is our home, a barred spiral galaxy about 100,000 light-years across, containing billions of stars and planets. From Earth, we see the Milky Way as a faint, milky band of light across the night sky, which is a view of the disk of stars from our vantage point within it. </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container-fluid bg-dark-subtle ">
+    
+    <footer>
+    <h3>Explore More</h3>
+    <p>Follow us for more cosmic discoveries.</p>
+
+    <div class="social">
+        <a href="#">🌌</a>
+        <a href="#">⭐</a>
+        <a href="#">🪐</a>
+    </div>
+
+    <div class="bottom">© 2025 Astronomy Web | Designed for Space Lovers</div>
+</footer>
+      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script>
+    let navtimeline = gsap.timeline()
+    navtimeline.from(".logo", {
+      opacity: 0,
+      y: -100,
+      duration: 1,
+    })
+    navtimeline.from("li", {
+      opacity: 0,
+      y: -30,
+      duration: 0.5,
+      stagger: 0.3
+    })
+    navtimeline.from(".nav-search", {
+      opacity: 0,
+      x: 300,
+      duration: 0.5,
+    })
+
+    gsap.from(".card", {
+      opacity: 0,
+      y: 100,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".card",
+        start: 500
+      }
+    })
+    gsap.from(".card img", {
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.2,
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".card",
+      }
+    })
+    gsap.from(".card .btn", {
+      opacity: 0,
+      duration: 0.5,
+      x: -100,
+      stagger: 0.2,
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".card ",
+      }
+    })
+
+  </script>
+
+
+
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+    <!-- <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label">Enter Your UserName</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Enter Your Email</label>
+                  <input type="email" class="form-control">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label mt-3">Enter Your Password</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label mt-3">Enter Your Country</label>
+                  <select class="form-select">
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="">Pakistan</option>
+                    <option value="">India</option>
+                    <option value="">Bangladesh</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label mt-3">Enter Your City</label>
+                  <select class="form-select">
+                    <option value="" disabled selected>Select Your City</option>
+                    <option value="">Karachi</option>
+                    <option value="">Lahore</option>
+                    <option value="">Islamabad</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label mt-3"> Postal Code</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</body>
+
+</html>
