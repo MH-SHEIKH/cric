@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomy - About Us</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f2f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Header Section */
+    header {
+      background: url('https://static.tweaktown.com/news/8/1/81145_100_heres-all-of-the-planets-in-our-solar-system-ranked.jpg') no-repeat center/cover;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      text-shadow: 0px 0px 10px cyan;
+      animation: glow 3s infinite alternate;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Main Content */
+    section {
+      padding: 60px 10%;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px #3baafc;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+      animation: float 4s infinite ease-in-out;
+    }
+
+    /* Mission Cards */
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,150,255,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #02051c;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px aqua; }
+      to   { text-shadow: 0 0 25px cyan; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>About Our Astronomy Project</h1>
+  <p>Exploring the universe through science, curiosity, and innovation. Our mission is to bring the cosmos closer to everyone.</p>
+</header>
+
+<section>
+  <h2 class="section-title">Galaxies</h2>
+
+  <div class="about-grid">
+    <div>
+      <p>
+        We are a team of astronomers, researchers, and space enthusiasts dedicated to studying galaxies,
+        stars, planets, and the mysteries of the universe.  
+        Our goal is to make astronomy accessible through education, research, and interactive tools.
+      </p>
+      <p>
+        From observing distant nebulae to studying black holes, we bring the wonders of the cosmos
+        directly to you.
+      </p>
+    </div>
+
+    <!-- Image -->
+    <img src="https://media.istockphoto.com/id/613869830/photo/spiral-galaxy-in-deep-spcae-3d-illustration.jpg?s=612x612&w=0&k=20&c=QOacjSGA3QFwP8XUZM3oeXXsveiIzPvETxgKxHbellY=" alt="Galaxy Image">
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">What We Do</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🔭 Space Observation</h3>
+      <p>We observe planets, star systems, nebulae, and galaxies using advanced telescopes and satellites.</p>
+    </div>
+
+    <div class="card">
+      <h3>📡 Research & Data</h3>
+      <p>Our team analyzes cosmic radiation, black hole activity, and star formation patterns.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌌 Public Education</h3>
+      <p>We teach astronomy through workshops, online courses, and space-exploration programs.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Our Vision</h2>
+  <p>
+    To spread knowledge of the universe and inspire the next generation of space explorers.
+    We aim to uncover cosmic secrets, advance space science, and encourage curiosity in people of all ages.
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 Astronomy Project — All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

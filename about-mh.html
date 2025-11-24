@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomy - About Us</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #050816;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Header */
+    header {
+      background: url('https://www.sammobile.com/wp-content/uploads/2022/07/STScI-01F8QS8JR44C2H9VMCBNZE6XNQ.png') no-repeat center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.8rem;
+      text-shadow: 0px 0px 15px cyan;
+      animation: glow 3s infinite alternate;
+    }
+
+    header p {
+      max-width: 700px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Main Section */
+    section {
+      padding: 60px 10%;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .section-title {
+      font-size: 2.6rem;
+      text-shadow: 0 0 12px #2dd4ff;
+      margin-bottom: 20px;
+    }
+
+    .planet-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .planet-box img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0,225,255,0.4);
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .planet-box p {
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px cyan; }
+      100% { text-shadow: 0 0 25px #00eaff; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #03040f;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>– About-Us </h1>
+  <p>Explore Earth, Mars, Jupiter, the Sun, Stars, and Galaxies with stunning images and cosmic details.</p>
+</header>
+
+<section>
+  <h2 class="section-title">🌍 Earth</h2>
+  <div class="planet-box">
+    <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/o/poster_earth_front_a.jpg?w=1200&h=1855&fit=clip&crop=faces%2Cfocalpoint" alt="Earth">
+    <p>
+      Earth is the third planet from the Sun and the only known world to support life.  
+      It has vast oceans, protective atmosphere, and a magnetic field that shields the planet from solar radiation.  
+      Earth’s rotation and tilt create seasons, weather, and climate patterns.
+    </p>
+  </div>
+
+  <h2 class="section-title">🪐 Jupiter</h2>
+  <div class="planet-box">
+    <img src="https://www.asc-csa.gc.ca/images/recherche/tiles/a14b9184-0517-458a-81f9-0987400beb05.jpg" alt="Jupiter">
+    <p>
+      Jupiter is the largest planet in the Solar System and a gas giant made mostly of hydrogen and helium.  
+      It has a massive storm called the Great Red Spot and more than 90 moons, including Europa and Ganymede.
+    </p>
+  </div>
+
+  <h2 class="section-title">🔴 Mars</h2>
+  <div class="planet-box">
+    <img src="https://starwalk.space/gallery/images/mars-red-planet/1920x1080.jpg" alt="Mars">
+    <p>
+      Mars, the “Red Planet,” is known for its iron-rich soil, thin atmosphere, and the largest volcano in the Solar System—Olympus Mons.  
+      Scientists believe Mars once had rivers and lakes and may have supported microbial life.
+    </p>
+  </div>
+
+  <h2 class="section-title">⭐ Stars</h2>
+  <div class="planet-box">
+    <img src="https://www.almanac.com/sites/default/files/images/Screen%20Shot%202023-12-04%20at%2012.50.40%20PM.png" alt="Stars">
+    <p>
+      Stars are massive spheres of hot plasma that produce light and energy through nuclear fusion.  
+      They come in different sizes and colors—red dwarfs, blue giants, yellow stars (like our Sun), and white dwarfs.  
+      Stars are the building blocks of galaxies.
+    </p>
+  </div>
+
+  <h2 class="section-title">☀️ Sun</h2>
+  <div class="planet-box">
+    <img src="https://media.es.wired.com/photos/66df3a878692ab2d1ae3baef/16:9/w_2560%2Cc_limit/460712793" alt="Sun">
+    <p>
+      The Sun is a yellow dwarf star at the center of our Solar System.  
+      It provides heat and light that make life on Earth possible.  
+      Its energy comes from nuclear fusion, converting hydrogen into helium.
+    </p>
+  </div>
+
+  <h2 class="section-title">🌌 Galaxies</h2>
+  <div class="planet-box">
+    <img src="https://media.istockphoto.com/id/613869830/photo/spiral-galaxy-in-deep-spcae-3d-illustration.jpg?s=612x612&w=0&k=20&c=QOacjSGA3QFwP8XUZM3oeXXsveiIzPvETxgKxHbellY=" alt="Galaxies">
+    <p>
+      Galaxies are enormous systems of stars, planets, dust, and dark matter.  
+      The Milky Way—our home galaxy—contains more than 100 billion stars.  
+      Other famous galaxies include Andromeda, Whirlpool, and Sombrero Galaxy.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2025 Astronomy Web Project – All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
